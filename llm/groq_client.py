@@ -51,9 +51,11 @@ content to save
 Current date and time: {CURRENT_DATETIME}"""
 
 
-async def chat(messages: list) -> str:
+async def chat(messages: list, items_context: str = "") -> str:
     now = datetime.now(IST).strftime("%Y-%m-%d %H:%M IST (%A)")
     system = SYSTEM_PROMPT.replace("{CURRENT_DATETIME}", now)
+    if items_context and items_context != "No saved items yet.":
+        system += f"\n\nAkhil's saved items (reference these when he asks about past work):\n{items_context}"
     response = await client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[{"role": "system", "content": system}] + messages,
