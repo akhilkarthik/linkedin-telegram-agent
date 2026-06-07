@@ -73,7 +73,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data.pop(_LAST_POST, None)
     context.user_data.pop(_AWAITING_SCHEDULE, None)
     await update.message.reply_text(
-        "Hey! I'm Alex, your personal assistant.\n\n"
+        "Hey! I'm Laura, your personal assistant.\n\n"
         "I can help you with:\n"
         "- LinkedIn posts — create, edit, rewrite, post, schedule\n"
         "- Edit or rewrite any content\n"

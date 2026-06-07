@@ -6,7 +6,7 @@ client = AsyncGroq(api_key=os.getenv("GROQ_API_KEY"))
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
-SYSTEM_PROMPT = """You are Alex, a sharp personal assistant with deep expertise in content creation, LinkedIn, and AI/ML.
+SYSTEM_PROMPT = """You are Laura, a sharp personal assistant with deep expertise in content creation, LinkedIn, and AI/ML.
 
 You help with:
 - Creating, editing, and improving LinkedIn posts
